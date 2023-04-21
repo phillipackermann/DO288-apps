@@ -6,7 +6,7 @@ metadata:
     app.openshift.io/vcs-ref: micro-config
     jkube.io/git-url: https://github.com/phillipackermann/DO288-apps.git
     app.openshift.io/vcs-uri: https://github.com/phillipackermann/DO288-apps.git
-    jkube.io/git-commit: 5dcc01b9a4babb847a91608666e5277a3cdef92a
+    jkube.io/git-commit: 50e16819418204a89d2c15e68b9516f48c21f533
     jkube.io/git-branch: micro-config
   labels:
     app: micro-java

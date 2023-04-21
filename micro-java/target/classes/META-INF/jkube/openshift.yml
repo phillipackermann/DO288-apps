@@ -9,7 +9,7 @@ items:
       app.openshift.io/vcs-ref: micro-config
       jkube.io/git-url: https://github.com/phillipackermann/DO288-apps.git
       app.openshift.io/vcs-uri: https://github.com/phillipackermann/DO288-apps.git
-      jkube.io/git-commit: 5dcc01b9a4babb847a91608666e5277a3cdef92a
+      jkube.io/git-commit: 50e16819418204a89d2c15e68b9516f48c21f533
       jkube.io/git-branch: micro-config
       prometheus.io/path: /metrics
       prometheus.io/port: "9779"
@@ -40,6 +40,8 @@ items:
       version: "1.0"
       group: com.redhat.training.openshift.hello
     name: configmap-hello
+  data:
+    APP_MSG: the is the new value that hhas been set.
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
@@ -47,7 +49,7 @@ items:
       app.openshift.io/vcs-ref: micro-config
       jkube.io/git-url: https://github.com/phillipackermann/DO288-apps.git
       app.openshift.io/vcs-uri: https://github.com/phillipackermann/DO288-apps.git
-      jkube.io/git-commit: 5dcc01b9a4babb847a91608666e5277a3cdef92a
+      jkube.io/git-commit: 50e16819418204a89d2c15e68b9516f48c21f533
       jkube.io/git-branch: micro-config
     labels:
       app: micro-java
@@ -102,7 +104,7 @@ items:
       app.openshift.io/vcs-ref: micro-config
       jkube.io/git-url: https://github.com/phillipackermann/DO288-apps.git
       app.openshift.io/vcs-uri: https://github.com/phillipackermann/DO288-apps.git
-      jkube.io/git-commit: 5dcc01b9a4babb847a91608666e5277a3cdef92a
+      jkube.io/git-commit: 50e16819418204a89d2c15e68b9516f48c21f533
       jkube.io/git-branch: micro-config
     labels:
       app: micro-java

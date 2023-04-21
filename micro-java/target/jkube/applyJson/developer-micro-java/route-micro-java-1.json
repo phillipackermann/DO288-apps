@@ -1,0 +1,99 @@
+{
+  "apiVersion" : "route.openshift.io/v1",
+  "kind" : "Route",
+  "metadata" : {
+    "annotations" : {
+      "app.openshift.io/vcs-ref" : "micro-config",
+      "app.openshift.io/vcs-uri" : "https://github.com/phillipackermann/DO288-apps.git",
+      "jkube.io/git-branch" : "micro-config",
+      "jkube.io/git-commit" : "50e16819418204a89d2c15e68b9516f48c21f533",
+      "jkube.io/git-url" : "https://github.com/phillipackermann/DO288-apps.git"
+    },
+    "creationTimestamp" : "2023-04-21T07:55:21Z",
+    "labels" : {
+      "app" : "micro-java",
+      "group" : "com.redhat.training.openshift.hello",
+      "provider" : "jkube",
+      "version" : "1.0"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "route.openshift.io/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:annotations" : {
+            "." : { },
+            "f:app.openshift.io/vcs-ref" : { },
+            "f:app.openshift.io/vcs-uri" : { },
+            "f:jkube.io/git-branch" : { },
+            "f:jkube.io/git-commit" : { },
+            "f:jkube.io/git-url" : { }
+          },
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:port" : {
+            "." : { },
+            "f:targetPort" : { }
+          },
+          "f:to" : {
+            "f:kind" : { },
+            "f:name" : { },
+            "f:weight" : { }
+          },
+          "f:wildcardPolicy" : { }
+        }
+      },
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "time" : "2023-04-21T07:55:21Z"
+    }, {
+      "apiVersion" : "route.openshift.io/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:status" : {
+          "f:ingress" : { }
+        }
+      },
+      "manager" : "openshift-router",
+      "operation" : "Update",
+      "time" : "2023-04-21T07:55:21Z",
+      "subresource" : "status"
+    } ],
+    "name" : "micro-java",
+    "namespace" : "developer-micro-java",
+    "resourceVersion" : "918348",
+    "uid" : "51c48332-80df-4829-83ec-71afc2fc4443"
+  },
+  "spec" : {
+    "host" : "micro-java-developer-micro-java.apps.ocp4.example.com",
+    "port" : {
+      "targetPort" : 8080
+    },
+    "to" : {
+      "kind" : "Service",
+      "name" : "micro-java",
+      "weight" : 100
+    },
+    "wildcardPolicy" : "None"
+  },
+  "status" : {
+    "ingress" : [ {
+      "conditions" : [ {
+        "lastTransitionTime" : "2023-04-21T07:55:21Z",
+        "status" : "True",
+        "type" : "Admitted"
+      } ],
+      "host" : "micro-java-developer-micro-java.apps.ocp4.example.com",
+      "routerCanonicalHostname" : "router-default.apps.ocp4.example.com",
+      "routerName" : "default",
+      "wildcardPolicy" : "None"
+    } ]
+  }
+}

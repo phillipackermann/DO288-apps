@@ -1,0 +1,266 @@
+{
+  "apiVersion" : "apps/v1",
+  "kind" : "Deployment",
+  "metadata" : {
+    "annotations" : {
+      "app.openshift.io/vcs-ref" : "micro-config",
+      "app.openshift.io/vcs-uri" : "https://github.com/phillipackermann/DO288-apps.git",
+      "jkube.io/git-branch" : "micro-config",
+      "jkube.io/git-commit" : "50e16819418204a89d2c15e68b9516f48c21f533",
+      "jkube.io/git-url" : "https://github.com/phillipackermann/DO288-apps.git"
+    },
+    "creationTimestamp" : "2023-04-21T07:55:21Z",
+    "generation" : 3,
+    "labels" : {
+      "app" : "micro-java",
+      "group" : "com.redhat.training.openshift.hello",
+      "provider" : "jkube",
+      "version" : "1.0"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "apps/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:annotations" : {
+            "." : { },
+            "f:app.openshift.io/vcs-ref" : { },
+            "f:app.openshift.io/vcs-uri" : { },
+            "f:jkube.io/git-branch" : { },
+            "f:jkube.io/git-commit" : { },
+            "f:jkube.io/git-url" : { }
+          },
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:progressDeadlineSeconds" : { },
+          "f:replicas" : { },
+          "f:revisionHistoryLimit" : { },
+          "f:selector" : { },
+          "f:strategy" : {
+            "f:rollingUpdate" : {
+              "." : { },
+              "f:maxSurge" : { },
+              "f:maxUnavailable" : { }
+            },
+            "f:type" : { }
+          },
+          "f:template" : {
+            "f:metadata" : {
+              "f:labels" : {
+                "." : { },
+                "f:app" : { },
+                "f:group" : { },
+                "f:provider" : { },
+                "f:version" : { }
+              },
+              "f:name" : { }
+            },
+            "f:spec" : {
+              "f:containers" : {
+                "k:{\"name\":\"quarkus\"}" : {
+                  "." : { },
+                  "f:env" : {
+                    "." : { },
+                    "k:{\"name\":\"KUBERNETES_NAMESPACE\"}" : {
+                      "." : { },
+                      "f:name" : { },
+                      "f:valueFrom" : {
+                        "." : { },
+                        "f:fieldRef" : { }
+                      }
+                    }
+                  },
+                  "f:envFrom" : { },
+                  "f:image" : { },
+                  "f:imagePullPolicy" : { },
+                  "f:name" : { },
+                  "f:ports" : {
+                    "." : { },
+                    "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    },
+                    "k:{\"containerPort\":8778,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    },
+                    "k:{\"containerPort\":9779,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    }
+                  },
+                  "f:resources" : { },
+                  "f:securityContext" : {
+                    "." : { },
+                    "f:privileged" : { }
+                  },
+                  "f:terminationMessagePath" : { },
+                  "f:terminationMessagePolicy" : { }
+                }
+              },
+              "f:dnsPolicy" : { },
+              "f:restartPolicy" : { },
+              "f:schedulerName" : { },
+              "f:securityContext" : { },
+              "f:terminationGracePeriodSeconds" : { }
+            }
+          }
+        }
+      },
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "time" : "2023-04-21T07:55:21Z"
+    }, {
+      "apiVersion" : "apps/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:status" : {
+          "f:availableReplicas" : { },
+          "f:conditions" : {
+            "." : { },
+            "k:{\"type\":\"Available\"}" : {
+              "." : { },
+              "f:lastTransitionTime" : { },
+              "f:lastUpdateTime" : { },
+              "f:message" : { },
+              "f:reason" : { },
+              "f:status" : { },
+              "f:type" : { }
+            },
+            "k:{\"type\":\"Progressing\"}" : {
+              "." : { },
+              "f:lastTransitionTime" : { },
+              "f:lastUpdateTime" : { },
+              "f:message" : { },
+              "f:reason" : { },
+              "f:status" : { },
+              "f:type" : { }
+            }
+          },
+          "f:observedGeneration" : { },
+          "f:readyReplicas" : { },
+          "f:replicas" : { },
+          "f:updatedReplicas" : { }
+        }
+      },
+      "manager" : "kube-controller-manager",
+      "operation" : "Update",
+      "time" : "2023-04-21T08:00:10Z",
+      "subresource" : "status"
+    } ],
+    "name" : "micro-java",
+    "namespace" : "developer-micro-java",
+    "resourceVersion" : "918750",
+    "uid" : "fba596cf-e5d3-4fb0-a596-f0738336b4ff"
+  },
+  "spec" : {
+    "progressDeadlineSeconds" : 600,
+    "replicas" : 1,
+    "revisionHistoryLimit" : 10,
+    "selector" : {
+      "matchLabels" : {
+        "app" : "micro-java",
+        "group" : "com.redhat.training.openshift.hello",
+        "provider" : "jkube"
+      }
+    },
+    "strategy" : {
+      "rollingUpdate" : {
+        "maxSurge" : "25%",
+        "maxUnavailable" : "25%"
+      },
+      "type" : "RollingUpdate"
+    },
+    "template" : {
+      "metadata" : {
+        "labels" : {
+          "app" : "micro-java",
+          "group" : "com.redhat.training.openshift.hello",
+          "provider" : "jkube",
+          "version" : "1.0"
+        },
+        "name" : "micro-java"
+      },
+      "spec" : {
+        "containers" : [ {
+          "env" : [ {
+            "name" : "KUBERNETES_NAMESPACE",
+            "valueFrom" : {
+              "fieldRef" : {
+                "apiVersion" : "v1",
+                "fieldPath" : "metadata.namespace"
+              }
+            }
+          } ],
+          "envFrom" : [ {
+            "configMapRef" : {
+              "name" : "configmap-hello"
+            }
+          } ],
+          "image" : "image-registry.openshift-image-registry.svc:5000/developer-micro-java/micro-java@sha256:9ca64b7dc7ebe84e7213d1a12be3904e40aedca5d2104e1a09a8fa95f3ca1156",
+          "imagePullPolicy" : "IfNotPresent",
+          "name" : "quarkus",
+          "ports" : [ {
+            "containerPort" : 8080,
+            "name" : "http",
+            "protocol" : "TCP"
+          }, {
+            "containerPort" : 9779,
+            "name" : "prometheus",
+            "protocol" : "TCP"
+          }, {
+            "containerPort" : 8778,
+            "name" : "jolokia",
+            "protocol" : "TCP"
+          } ],
+          "resources" : { },
+          "securityContext" : {
+            "privileged" : false
+          },
+          "terminationMessagePath" : "/dev/termination-log",
+          "terminationMessagePolicy" : "File"
+        } ],
+        "dnsPolicy" : "ClusterFirst",
+        "restartPolicy" : "Always",
+        "schedulerName" : "default-scheduler",
+        "securityContext" : { },
+        "terminationGracePeriodSeconds" : 30
+      }
+    }
+  },
+  "status" : {
+    "availableReplicas" : 1,
+    "conditions" : [ {
+      "lastTransitionTime" : "2023-04-21T07:55:33Z",
+      "lastUpdateTime" : "2023-04-21T07:55:33Z",
+      "message" : "Deployment has minimum availability.",
+      "reason" : "MinimumReplicasAvailable",
+      "status" : "True",
+      "type" : "Available"
+    }, {
+      "lastTransitionTime" : "2023-04-21T07:55:21Z",
+      "lastUpdateTime" : "2023-04-21T08:00:10Z",
+      "message" : "ReplicaSet \"micro-java-6c668c5967\" has successfully progressed.",
+      "reason" : "NewReplicaSetAvailable",
+      "status" : "True",
+      "type" : "Progressing"
+    } ],
+    "observedGeneration" : 2,
+    "readyReplicas" : 1,
+    "replicas" : 1,
+    "updatedReplicas" : 1
+  }
+}

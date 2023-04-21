@@ -10,6 +10,6 @@ items:
     tags:
     - from:
         kind: ImageStreamImage
-        name: micro-java@sha256:833f3ee75b0ce05a23d8be8e64ae9064de4e203f59aeeedb3310ae8d55dc4f32
+        name: micro-java@sha256:9ca64b7dc7ebe84e7213d1a12be3904e40aedca5d2104e1a09a8fa95f3ca1156
         namespace: developer-micro-java
       name: "1.0"

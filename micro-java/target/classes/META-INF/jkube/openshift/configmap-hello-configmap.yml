@@ -8,3 +8,5 @@ metadata:
     version: "1.0"
     group: com.redhat.training.openshift.hello
   name: configmap-hello
+data:
+  APP_MSG: the is the new value that hhas been set.

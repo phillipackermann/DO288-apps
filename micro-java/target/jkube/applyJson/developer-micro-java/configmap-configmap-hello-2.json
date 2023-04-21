@@ -1,0 +1,42 @@
+{
+  "apiVersion" : "v1",
+  "kind" : "ConfigMap",
+  "metadata" : {
+    "creationTimestamp" : "2023-04-21T07:55:21Z",
+    "labels" : {
+      "app" : "micro-java",
+      "group" : "com.redhat.training.openshift.hello",
+      "provider" : "jkube",
+      "version" : "1.0"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:data" : {
+          "." : { },
+          "f:APP_MSG" : { }
+        },
+        "f:metadata" : {
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        }
+      },
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "time" : "2023-04-21T08:00:06Z"
+    } ],
+    "name" : "configmap-hello",
+    "namespace" : "developer-micro-java",
+    "resourceVersion" : "918329",
+    "uid" : "a59ffe21-f69f-4884-b50d-a2f2b01fc193"
+  },
+  "data" : {
+    "APP_MSG" : "the is the new value that hhas been set."
+  }
+}
